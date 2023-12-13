@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berandaa<3</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content:center; /* Add space between title and menu */
+            align-items: center;
+            transition: background-color 0.3s ease;
+        }
+
+        header:hover {
+            background-color: #45a049;
+        }
+
+        .menu {
+            cursor: pointer;
+            font-size: 24px;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .slideshow-container {
+            max-width: 600px;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .mySlides {
+        display: none;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px; /* Menambahkan margin atas pada tombol */
+        transition: transform 0.4s ease; /* Transisi untuk transform dan background-color */
+        }
+
+        .mySlides:hover {
+        transform: scale(1.1);
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        img:hover {
+            transform: scale(1.1);
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 0px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            transition: background-color 0.4s ease;
+        }
+
+        footer:hover {
+            background-color: #555;
+        }
+
+        .quit-button {
+            cursor: pointer;
+            font-size: 18px;
+            padding: 5px 10px;
+            background-color: #f44336;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.5s ease;
+        }
+
+        .quit-button:hover {
+            transform: scale(2.2);
+            background-color: #d32f2f;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>ALOOWW AKU MAU KENALIN PCR AK YG SANGAT GEMOY ! </h1>
+</header>
+
+<div>
+    <button class="quit-button" onclick="quitPage()">Jangan genit lah woe, keluar sini !</button>
+</div>
+
+<main>
+    <h2>About My Gf!</h2>
+    <p>Nama dia itu Ayu, dia sukaa ngomel mulu camaa akuu mau liat gaa fotonyaa nih aku kasi liat</p>
+
+    <div class="slideshow-container">
+        <div class="mySlides">
+            <img src="ayu.jpg" alt="ayu foto 1">
+        </div>
+
+        <div class="mySlides">
+            <img src="ayu2.jpg" alt="ayu foto 2">
+        </div>
+
+        <div class="mySlides">
+            <img src="ayu.jpg" alt="ayu foto 3">
+        </div>
+    </div>
+
+    <h2>Funfact</h2>
+    <p>Suka ngomel, cerewetnya kayak emak-emak cok!, suka tantrum kalo ga pernah ditanya-tanya, serba salah deh</p>
+</main>
+
+<footer>
+    <p>&copy; 2023 My Accounting Website. All rights reserved.</p>
+</footer>
+
+<script>
+    let slideIndex = 0;
+
+    function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+            slideIndex = 1;
+        }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+
+    // Run the slideshow
+    showSlides();
+
+    function quitPage() {
+        // Function to quit or navigate away from the page
+        window.location.href = "https://www.google.com"; // Replace with the desired URL or leave it empty
+    }
+</script>
+
+</body>
+</html>
